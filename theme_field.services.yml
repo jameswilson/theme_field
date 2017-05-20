@@ -1,0 +1,6 @@
+services:
+  theme.filed..negotiator:
+    class: Drupal\theme_field\Theme\ThemeFieldNegotiator
+    arguments: []
+    tags:
+      - { name: theme_negotiator, priority: 10 }
