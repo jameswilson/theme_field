@@ -18,7 +18,6 @@ use Drupal\Core\TypedData\DataDefinition;
  *   label = @Translation("Theme"),
  *   description = @Translation("Theme"),
  *   default_widget = "theme_field_widget",
- *   default_formatter = "theme_field_formatter"
  * )
  */
 class ThemeFieldType extends FieldItemBase {

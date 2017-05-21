@@ -1,5 +1,5 @@
 services:
-  theme.filed..negotiator:
+  theme_field.default:
     class: Drupal\theme_field\Theme\ThemeFieldNegotiator
     arguments: []
     tags:
