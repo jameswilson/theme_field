@@ -27,23 +27,23 @@ class ThemeFieldWidget extends WidgetBase {
 
     $default_value = isset($items[$delta]->value) ? $items[$delta]->value : '';
 
-    $options = array();
+    $options = [];
     $theme_handler = \Drupal::service('theme_handler');
     $themes = $theme_handler->listInfo();
     $parser = new InfoParser();
     foreach ($themes as $key => $theme) {
       $info = $parser->parse(drupal_get_path('theme', $key) . '/' . $key . '.info.yml');
-        $options[$key] = $theme_handler->getName($key);
+      $options[$key] = $theme_handler->getName($key);
     }
-    $element = array(
+    $element = [
       '#type' => 'select',
       '#title' => $this->t('Theme'),
       '#options' => $options,
       '#default_value' => $default_value,
       '#multiple' => FALSE,
-    );
+    ];
 
-    return array('value' => $element);
+    return ['value' => $element];
   }
 
 }
