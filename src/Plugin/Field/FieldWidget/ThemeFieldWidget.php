@@ -35,9 +35,8 @@ class ThemeFieldWidget extends WidgetBase {
       $info = $parser->parse(drupal_get_path('theme', $key) . '/' . $key . '.info.yml');
       $options[$key] = $theme_handler->getName($key);
     }
-    $element = [
+    $element += [
       '#type' => 'select',
-      '#title' => $this->t('Theme'),
       '#options' => $options,
       '#default_value' => $default_value,
       '#multiple' => FALSE,
