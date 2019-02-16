@@ -120,7 +120,7 @@ class ThemeFieldType extends FieldItemBase {
    */
   public function isEmpty() {
     $value = $this->get('value')->getValue();
-    return $value === NULL || $value === '';
+    return $value === NULL || $value === '' || $value == '_none';
   }
 
 }

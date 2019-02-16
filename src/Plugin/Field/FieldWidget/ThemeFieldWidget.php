@@ -27,7 +27,7 @@ class ThemeFieldWidget extends WidgetBase {
 
     $default_value = isset($items[$delta]->value) ? $items[$delta]->value : '';
 
-    $options = [];
+    $options = ['_none' => t('Default theme')];
     $theme_handler = \Drupal::service('theme_handler');
     $themes = $theme_handler->listInfo();
     $parser = new InfoParser();
