@@ -1,6 +1,6 @@
 services:
   theme_field.default:
     class: Drupal\theme_field\Theme\ThemeFieldNegotiator
-    arguments: []
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@router.admin_context']
     tags:
       - { name: theme_negotiator, priority: 10 }
